@@ -120,8 +120,10 @@ export default function App() {
   return (
     <div className="page">
       <ReportSection />
-      <Header />
-      <FlowSummary />
+      <div id="section-2">
+        <Header />
+        <FlowSummary />
+      </div>
 
       <ControlBar
         playing={state.playing}
@@ -143,7 +145,7 @@ export default function App() {
       <Legend />
 
       <ErrorBoundary>
-      <div className={vizStyles.wrap}>
+      <div id="section-3" className={vizStyles.wrap}>
         <ArchPanel
           variant="bad"
           title={`🔴 OFFICIAL — run_in_executor (pool=${poolSize}, req=${N})`}
@@ -172,6 +174,7 @@ export default function App() {
       </div>
       </ErrorBoundary>
 
+      <div id="section-4">
       <MetricsDashboard
         metrics={metrics}
         done={done}
@@ -179,9 +182,14 @@ export default function App() {
         poolSize={poolSize}
         C={C}
       />
+      </div>
 
-      <InsightNotes />
-      <CodeComparison />
+      <div id="section-5">
+        <InsightNotes />
+      </div>
+      <div id="section-6">
+        <CodeComparison />
+      </div>
     </div>
   );
 }

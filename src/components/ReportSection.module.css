@@ -15,17 +15,17 @@
 }
 
 .reportTitle {
-  font-size: clamp(1rem, 2.4vw, 1.4rem);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
   font-weight: 800;
   color: var(--tx);
   line-height: 1.35;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .reportSubtitle {
-  font-size: 0.78rem;
+  font-size: 0.92rem;
   color: var(--tx2);
-  max-width: 600px;
+  max-width: 680px;
   margin: 0 auto;
   line-height: 1.5;
 }
@@ -40,7 +40,7 @@
 }
 
 .metaItem {
-  font-size: 0.68rem;
+  font-size: 0.78rem;
   color: var(--tx3);
   display: flex;
   align-items: center;
@@ -52,13 +52,13 @@
   color: var(--tx2);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-size: 0.6rem;
+  font-size: 0.72rem;
 }
 
 .metaValue {
   font-family: 'JetBrains Mono', monospace;
   color: var(--tx);
-  font-size: 0.66rem;
+  font-size: 0.78rem;
 }
 
 /* ── Sections ── */
@@ -67,7 +67,7 @@
 }
 
 .sectionTitle {
-  font-size: 0.72rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: var(--tx);
   text-transform: uppercase;
@@ -90,7 +90,7 @@
 }
 
 .sectionBody {
-  font-size: 0.72rem;
+  font-size: 0.88rem;
   color: var(--tx2);
   line-height: 1.7;
 }
@@ -101,6 +101,21 @@
 
 .sectionBody p:last-child {
   margin-bottom: 0;
+}
+
+/* ── Sub Headings ── */
+.subHeading {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--tx);
+  margin-top: 12px;
+  margin-bottom: 4px;
+  letter-spacing: 0.3px;
+}
+
+.subHeading::before {
+  content: '▸ ';
+  color: var(--io);
 }
 
 /* ── Highlight Spans ── */
@@ -132,7 +147,7 @@
   display: flex;
   gap: 8px;
   align-items: flex-start;
-  font-size: 0.7rem;
+  font-size: 0.86rem;
   color: var(--tx2);
   line-height: 1.5;
   padding: 6px 10px;
@@ -142,7 +157,7 @@
 
 .findingIcon {
   flex-shrink: 0;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   margin-top: 1px;
 }
 
@@ -155,7 +170,7 @@
 }
 
 .tocItem {
-  font-size: 0.66rem;
+  font-size: 0.8rem;
   font-family: 'JetBrains Mono', monospace;
   color: var(--tx3);
   padding: 4px 8px;
@@ -164,6 +179,17 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.tocItem:hover {
+  background: var(--bdr2);
+}
+
+.tocItem:hover .tocLabel {
+  color: var(--tx);
 }
 
 .tocNum {
